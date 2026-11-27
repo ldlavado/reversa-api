@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: reversa-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: reversa
+      POSTGRES_PASSWORD: reversa_dev_password
+      POSTGRES_DB: reversa
+    ports:
+      - '5432:5432'
+    volumes:
+      - reversa_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U reversa -d reversa']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  reversa_pgdata:
