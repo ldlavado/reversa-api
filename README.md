@@ -64,6 +64,13 @@ Once running:
 | `pnpm prisma:generate` | Generate Prisma Client into `src/generated/prisma` |
 | `pnpm prisma:migrate:dev` | Create and apply local database migrations |
 
+## Documentation & Specs
+
+- [`AGENTS.md`](AGENTS.md) — Engineering rules, workflow conventions, and guidelines for AI coding agents
+- [`docs/architecture.md`](docs/architecture.md) — Modular NestJS structure, Prisma 7 patterns, API conventions, and testing strategy
+- [`docs/domain-model.md`](docs/domain-model.md) — Domain entities, Bogotá COP pricing model, RBAC roles, and reservation lifecycle
+- [`docs/roadmap.md`](docs/roadmap.md) — Detailed phased implementation plan (Phases 0–5)
+
 ## Roadmap
 
 - [x] **Phase 0:** Repository rename, legacy consolidation (`v0.1.0-legacy`), and TBD setup
